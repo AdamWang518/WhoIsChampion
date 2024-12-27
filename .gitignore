@@ -1,0 +1,42 @@
+# 編譯輸出
+bin/
+obj/
+debug/
+release/
+
+# NuGet Packages
+*.nupkg
+packages/
+
+# VS 和使用者相關檔案
+.vs/
+*.user
+*.suo
+
+# 臨時檔案
+*.log
+*.tlog
+*.temp
+~*.*
+
+# 測試結果
+TestResults/
+*.trx
+*.coverage
+*.codecov
+
+# 預編譯檔案
+*.pch
+*.ipch
+
+# 作業系統
+Thumbs.db
+.DS_Store
+
+# Docker
+docker-compose.override.yml
+
+CardAndDice/.vs/CardAndDice/v17/.suo
+CardAndDice/.vs/CardAndDice/v17/.suo
+CardAndDice/.vs/CardAndDice/v17/.suo
+/CardAndDice/.vs/CardAndDice/v17
