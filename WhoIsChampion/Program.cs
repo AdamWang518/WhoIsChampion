@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,26 @@ namespace WhoIsChampion
     {
         static void Main(string[] args)
         {
-            Player p1 = new Player(1,"小明");
+            Player p1 = new Player(1, "小明");
             Player p2 = new Player(2, "小華");
             Player p3 = new Player(3, "阿寶");
             Player p4 = new Player(4, "老皮");
-            List<Player> list = new List<Player> { p1,p2,p3,p4};
-            
+            List<Player> playerList = new List<Player> { p1, p2, p3, p4 };
+            Fight fight = new Fight();
+            while (playerList.Count > 1)
+            {
+                List<Player> nextRoundPlayer = new List<Player>();
+                for (int i = 0; i < playerList.Count; i += 2)
+                {
+                    Player winner = fight.DeathMatch(playerList[i], playerList[i + 1]);
+                    Console.WriteLine($"{playerList[i].Name}對戰{playerList[i+1].Name}");
+                    Console.WriteLine($"{winner.Name}獲得勝利");
+                    nextRoundPlayer.Add(winner);
+                }
+                playerList = nextRoundPlayer;
+            }
+            Console.WriteLine($"比賽結束，{playerList[0].Name}獲得最終勝利");
+            return;
         }
     }
 }

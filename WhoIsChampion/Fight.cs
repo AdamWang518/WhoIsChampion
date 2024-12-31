@@ -16,8 +16,8 @@ namespace WhoIsChampion
             (attackPlayer, defenderPlayer) = (playerA.Agility == playerB.Agility) && (playerA.ID < playerB.ID) ? (defenderPlayer, attackPlayer) : (attackPlayer, defenderPlayer);
             while (attackPlayer.Health>0 && defenderPlayer.Health >0)
             {
-                bool hasNextTurn = PK(attackPlayer, defenderPlayer);
-                if (!hasNextTurn)
+                bool donthasNextTurn = PK(attackPlayer, defenderPlayer);
+                if (!donthasNextTurn)
                 {
                     (attackPlayer, defenderPlayer) = (defenderPlayer, attackPlayer);
                 }
