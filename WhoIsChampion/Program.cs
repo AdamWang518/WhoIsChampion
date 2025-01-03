@@ -11,6 +11,11 @@ namespace WhoIsChampion
     {
         static void Main(string[] args)
         {
+            // 建立FightGame 類別，讓他有CreatePlayer StartGame ShowWinner的函示
+            // 讓人數建立都在CreatePlayrer做
+            // 然後StartGame 去拿到Player List, 就可以在 StartGame 裡面進行遊玩
+            // 並且讓使用者決定要使用循環賽還是單淘汰賽 (請使用enum來做)
+            // 最後做完之後透過ShowWinner 顯示最終勝利玩家
             Player p1 = new Player(1, "小明");
             Player p2 = new Player(2, "小華");
             Player p3 = new Player(3, "阿寶");
