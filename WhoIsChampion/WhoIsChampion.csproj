@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Arrange.cs" />
     <Compile Include="Fight.cs" />
+    <Compile Include="FightGame.cs" />
+    <Compile Include="FightGameType.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

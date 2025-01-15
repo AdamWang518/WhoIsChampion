@@ -16,18 +16,14 @@ namespace WhoIsChampion
             // 然後StartGame 去拿到Player List, 就可以在 StartGame 裡面進行遊玩
             // 並且讓使用者決定要使用循環賽還是單淘汰賽 (請使用enum來做)
             // 最後做完之後透過ShowWinner 顯示最終勝利玩家
-            Player p1 = new Player(1, "小明");
-            Player p2 = new Player(2, "小華");
-            Player p3 = new Player(3, "阿寶");
-            Player p4 = new Player(4, "老皮");
-            Player p5 = new Player(5, "Joker");
-            List<Player> playerList = new List<Player> { p1, p2, p3, p4,p5 };
+            FightGame fightGame = new FightGame();
+            fightGame.createPlayer();
             Arrange arrange = new Arrange();
-            while (playerList.Count > 1)
+            while (fightGame.playerList.Count > 1)
             {
-                playerList=arrange.Single(playerList);
+                fightGame.playerList =arrange.Single(fightGame.playerList);
             }
-            Console.WriteLine($"比賽結束，{playerList[0].Name}獲得最終勝利");
+            Console.WriteLine($"比賽結束，{fightGame.playerList[0].Name}獲得最終勝利");
             Console.ReadKey();
         }
     }
