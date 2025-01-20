@@ -23,6 +23,7 @@ namespace WhoIsChampion
             {
                 fightGame.playerList =arrange.Single(fightGame.playerList);
             }
+            //無限比賽
             Console.WriteLine($"比賽結束，{fightGame.playerList[0].Name}獲得最終勝利");
             Console.ReadKey();
         }

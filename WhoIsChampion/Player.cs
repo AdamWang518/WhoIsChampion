@@ -15,7 +15,7 @@ namespace WhoIsChampion
         public int Agility { get; set; }
         public string Name { get; set; }
         public int ID { get; set; }
-
+        public int Defeat { get; set; }
         public Player(int id,string name) {
             Random rnd = new Random();
             Attack = rnd.Next(6,11);

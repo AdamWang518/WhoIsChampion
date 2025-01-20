@@ -14,6 +14,7 @@ namespace WhoIsChampion
         // 並且讓使用者決定要使用循環賽還是單淘汰賽 (請使用enum來做)
         // 最後做完之後透過ShowWinner 顯示最終勝利玩家
         public List<Player> playerList = new List<Player>();
+        public Dictionary<RaceType, List<Player>> playerDict = new Dictionary<RaceType, List<Player>>();
         public void createPlayer()
         {
             int numberOfPlayer = 0;
@@ -23,6 +24,7 @@ namespace WhoIsChampion
             {
                 playerList.Add(new Player(i, Console.ReadLine()));
             }
+            playerDict[RaceType.勝者組] = playerList;
         }
         public void setGameType()
         {
